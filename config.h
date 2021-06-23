@@ -1,6 +1,5 @@
 /* See LICENSE file for copyright and license details. */
 
-#include <X11/XF86keysym.h>
 #include "fibonacci.c"
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -68,11 +67,6 @@ static const Layout layouts[] = {
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_black, "-nf", col_gray4, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
 static const char *browsercmd[]  = { "brave", NULL };
-static const char *upvol[]   = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+10%",  NULL };
-static const char *downvol[]   = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-10%",  NULL };
-static const char *mutevol[]   = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle",  NULL };
-static const char *brupcmd[] = { "brightnessctl", "set", "+10%", NULL };
-static const char *brdowncmd[] = { "brightnessctl", "set", "10%-", NULL };
 static const char *lockcmd[] = { "slock", NULL };
 static const char *filecmd[] = { "urxvt", "-e", "lf", NULL };
 
@@ -83,11 +77,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = browsercmd} },
-	{ MODKEY,   XF86XK_MonBrightnessDown,      spawn,          {.v = brdowncmd} },
-	{ MODKEY,     XF86XK_MonBrightnessUp,      spawn,          {.v = brupcmd} },
-	{ MODKEY,           XF86XK_AudioMute,      spawn,          {.v = mutevol} },
-	{ MODKEY,    XF86XK_AudioLowerVolume,      spawn,          {.v = downvol} },
-	{ MODKEY,    XF86XK_AudioRaiseVolume,      spawn,          {.v = upvol} },
 	{ MODKEY,    			XK_x,      spawn,          {.v = lockcmd} },
 	{ MODKEY,    			XK_p,      spawn,          {.v = filecmd} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
