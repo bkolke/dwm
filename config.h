@@ -67,7 +67,7 @@ static const Layout layouts[] = {
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_black, "-nf", col_gray4, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
 static const char *browsercmd[]  = { "brave", NULL };
-static const char *lockcmd[] = { "slock", NULL };
+static const char *lockcmd[] = { "i3lock", "-c", "000000", NULL };
 static const char *filecmd[] = { "urxvt", "-e", "lf", NULL };
 
 
