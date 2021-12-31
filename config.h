@@ -66,7 +66,7 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_black, "-nf", col_gray4, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
-static const char *bravecmd[]  = { "brave", NULL };
+static const char *browsercmd[]  = { "qutebrowser", NULL };
 static const char *lockcmd[] = { "i3lock", "-c", "000000", NULL };
 static const char *filecmd[] = { "pcmanfm", NULL };
 
@@ -76,8 +76,8 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_b,      spawn,          {.v = bravecmd} },
-	{ MODKEY,                       XK_w,      spawn,          {.v = bravecmd} },
+	{ MODKEY,                       XK_b,      spawn,          {.v = browsercmd} },
+	{ MODKEY,                       XK_w,      spawn,          {.v = browsercmd} },
 	{ MODKEY,            			XK_x,      spawn,          {.v = lockcmd} },
 	{ MODKEY,    			        XK_p,      spawn,          {.v = filecmd} },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
